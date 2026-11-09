@@ -1,0 +1,290 @@
+<title>Clayton Plastering Pitch Sheet</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a single printed sheet from the same pattern book as the preview. Cornice band on top, plaster-white page,
+   left column says what's missing, right column says what we built. Deliberately one light look (it's a sheet of paper). */
+:root {
+  --lime: #eef0ea;        /* lime plaster: page */
+  --plaster: #f8f9f5;     /* fresh coat: cards */
+  --ink: #2b2620;         /* lath brown-black: text */
+  --muted: #57524a;
+  --green: #1f4a34;       /* trowel green: their logo shirt */
+  --green-deep: #163828;
+  --green-soft: #c9d4cb;
+  --sage: #7f978c;        /* Park Royal cornice */
+  --sage-ink: #3f5a4c;
+  --sepia-ink: #6b4f33;
+  --sepia-wash: #e9e2d6;
+  --rule: #b9c4bb;
+  --amber: #e9c77b;
+  --display: "Libre Caslon Text", "Big Caslon", Georgia, serif;
+  --body: "Instrument Sans", "Helvetica Neue", Helvetica, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--lime); color: var(--ink); font: 400 1rem/1.6 var(--body); }
+.band { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.inner { max-width: 60rem; margin-inline: auto; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.1; letter-spacing: -0.01em; text-wrap: balance; margin: 0; }
+h1 em, h2 em { font-weight: 400; color: var(--green); }
+p { margin: 0; text-wrap: pretty; }
+a { color: var(--green); text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
+.kicker { font: 600 0.75rem/1.3 var(--body); letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage-ink); }
+
+/* cornice band: fillet, cyma, dentils, bead */
+.cornice { height: 30px; background:
+  linear-gradient(var(--green) 0 3px, transparent 3px),
+  linear-gradient(180deg, transparent 3px, var(--plaster) 3px, #9fb1a8 11px, transparent 11px),
+  linear-gradient(180deg, transparent 11px, var(--sage-ink) 11px 12.5px, transparent 12.5px),
+  repeating-linear-gradient(90deg, #d3dbd4 0 2px, var(--sage) 2px 11px, #d3dbd4 11px 14px) 0 13px / 100% 9px no-repeat,
+  linear-gradient(180deg, transparent 22px, var(--sage-ink) 22px 23.5px, transparent 23.5px),
+  radial-gradient(circle at 4px 3px, var(--sage-ink) 2.2px, transparent 2.6px) 0 24px / 14px 5px repeat-x,
+  linear-gradient(180deg, transparent 28px, var(--green) 28px); }
+
+/* masthead */
+.mast { padding-block: 2.5rem 2rem; }
+.mast .meta { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; justify-content: space-between; }
+.mast h1 { font-size: clamp(2.1rem, 6vw, 3.4rem); margin-top: 1rem; max-width: 16ch; }
+.mast .lede { margin-top: 1rem; font-size: 1.125rem; max-width: 58ch; }
+.url { margin-top: 1.25rem; display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; padding: 0.6rem 0.9rem; background: var(--green); color: var(--lime); }
+.url a { color: var(--lime); font-weight: 600; word-break: break-all; }
+.url span { font-size: 0.875rem; color: var(--green-soft); }
+
+/* phones */
+.phones { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; padding-block: 0.5rem 2.5rem; }
+.phone { margin: 0; min-width: 0; }
+.phone .shot { background: var(--plaster); padding: 0.5rem; border: 1px solid var(--rule); box-shadow: 0 0 0 4px var(--plaster), 0 0 0 5px var(--rule); }
+.phone img { display: block; width: 100%; height: auto; max-width: 100%; aspect-ratio: 390 / 664; object-fit: cover; object-position: top; }
+.phone figcaption { margin-top: 0.9rem; font-size: 0.9375rem; color: var(--muted); }
+.phone figcaption b { display: block; font-family: var(--display); font-size: 1.25rem; color: var(--ink); margin-bottom: 0.2rem; }
+.tag { display: inline-block; font: 600 0.6875rem/1 var(--body); letter-spacing: 0.14em; text-transform: uppercase; padding: 0.35rem 0.5rem; margin-bottom: 0.5rem; }
+.tag.old { background: var(--sepia-wash); color: var(--sepia-ink); }
+.tag.new { background: var(--green); color: var(--lime); }
+
+/* section heads */
+section { padding-block: 2.25rem; border-top: 1px solid var(--rule); }
+section > .inner > h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); }
+section > .inner > .sub { margin-top: 0.5rem; color: var(--muted); max-width: 60ch; }
+
+/* missing vs fixed */
+.pairs { margin-top: 1.5rem; display: grid; gap: 0.75rem; }
+.pairs .head { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 0 1rem; }
+.row { display: grid; grid-template-columns: 1fr 1fr; background: var(--plaster); border: 1px solid var(--rule); break-inside: avoid; }
+.row > div { padding: 1rem 1.1rem 1.1rem; min-width: 0; }
+.row .was { border-right: 1px solid var(--rule); }
+.row .now { background: #f2f5f1; }
+.row h3 { font-size: 1.15rem; margin-bottom: 0.35rem; }
+.row .was h3 { color: var(--sepia-ink); }
+.row .now h3 { color: var(--green); }
+.row p { font-size: 0.9375rem; }
+.row .lbl { display: none; }
+.strip { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 0.4rem; margin-top: 0.75rem; }
+.strip img { width: 100%; height: 100%; max-width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+
+/* numbers */
+.tablewrap { margin-top: 1.25rem; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: var(--plaster); border: 1px solid var(--rule); font-variant-numeric: tabular-nums; min-width: 30rem; }
+th, td { text-align: left; padding: 0.65rem 0.9rem; border-bottom: 1px solid var(--rule); font-size: 0.9375rem; vertical-align: top; }
+thead th { font: 600 0.75rem/1.3 var(--body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-ink); background: var(--lime); }
+td.old { color: var(--sepia-ink); }
+td.new { color: var(--green); font-weight: 700; }
+tbody tr:last-child td { border-bottom: 0; }
+.note { margin-top: 0.75rem; font-size: 0.8125rem; color: var(--muted); max-width: 70ch; }
+
+/* what you get */
+.get { margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.get > div { min-width: 0; }
+.get h3 { font-size: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--green); }
+.get ul { list-style: none; margin: 0.75rem 0 0; padding: 0; display: grid; gap: 0.45rem; }
+.get li { position: relative; padding-left: 1.2rem; font-size: 0.9375rem; }
+.get li::before { content: ""; position: absolute; left: 0.1rem; top: 0.55em; width: 0.42rem; height: 0.42rem; background: var(--sage); transform: rotate(45deg); }
+
+/* need from you */
+.need { margin-top: 1.25rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem 1.5rem; padding: 0; list-style: none; }
+.need li { display: flex; gap: 0.6rem; font-size: 0.9375rem; padding: 0.55rem 0.75rem; background: var(--plaster); border: 1px dashed var(--sepia-ink); color: var(--ink); min-width: 0; }
+.need li::before { content: "✎"; color: var(--sepia-ink); }
+
+/* close */
+.close { background: var(--green); color: var(--lime); padding-block: 2.25rem 2.5rem; border-top: 0; }
+.close h2 { color: var(--lime); font-size: clamp(1.8rem, 5vw, 2.6rem); }
+.close h2 em { color: var(--green-soft); }
+.close p { margin-top: 0.75rem; color: var(--green-soft); max-width: 58ch; font-size: 1.0625rem; }
+.close a { color: var(--lime); font-weight: 600; }
+.close a:focus-visible { outline-color: var(--amber); }
+.fine { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--green-deep); font-size: 0.8125rem; color: var(--green-soft); }
+
+@media (max-width: 40rem) {
+  .phones { grid-template-columns: 1fr; }
+  .pairs .head { display: none; }
+  .row { grid-template-columns: 1fr; }
+  .row .was { border-right: 0; border-bottom: 1px solid var(--rule); }
+  .row .lbl { display: block; margin-bottom: 0.3rem; }
+  .get, .need { grid-template-columns: 1fr; }
+}
+@media print {
+  body { background: #fff; }
+  section, .row, figure, table, .get > div { break-inside: avoid; }
+  .close { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+
+<div class="cornice" aria-hidden="true"></div>
+
+<header class="band mast">
+  <div class="inner">
+    <div class="meta">
+      <p class="kicker">Website review for Clayton Plastering &amp; Tuckpointing</p>
+      <p class="kicker" style="color: var(--muted)">Elward AI Dev LLC · November 2026</p>
+    </div>
+    <h1>Your work is better than <em>your website.</em></h1>
+    <p class="lede">Six generations of plaster, a ballroom cornice cast and set by hand, and a 4.4 on Google. A phone visitor to your site today sees a pop-up and a headline that could belong to anybody. We built a preview of what it could be, using your own photos and reviews. Here&rsquo;s what&rsquo;s missing now, what we fixed, and what you get.</p>
+    <p class="url"><span>See it on your phone:</span> <a href="https://clayton-plastering-preview.vercel.app" target="_blank" rel="noopener">clayton-plastering-preview.vercel.app</a></p>
+  </div>
+</header>
+
+<div class="band">
+  <div class="inner phones">
+    <figure class="phone">
+      <div class="shot"><img src="today-phone.jpg" width="780" height="1328" alt="Current Clayton Plastering home page on an iPhone: a Let's Talk pop-up covers the bottom of the screen over a dimmed headline reading St. Louis' Choice Plastering and Tuckpointing Service"></div>
+      <figcaption><span class="tag old">Your site today</span><b>First screen on an iPhone</b>A &ldquo;Let&rsquo;s Talk!&rdquo; pop-up covers the bottom within seconds. The headline says &ldquo;St. Louis&rsquo; Choice Plastering &amp; Tuckpointing Service.&rdquo; No rating, no sixth generation, none of your best work.</figcaption>
+    </figure>
+    <figure class="phone">
+      <div class="shot"><img src="preview-phone.jpg" width="780" height="1328" alt="Preview home page on an iPhone: Six generations of St. Louis plaster, a call button, ratings 4.4 on Google, BBB A+, 6th generation, free estimates, and a pinned Call and Text a photo bar"></div>
+      <figcaption><span class="tag new">The preview</span><b>Same phone, same first screen</b>What you do, where, 4.4 on Google, BBB A+, sixth generation and free estimates, with a call button. Call and Text stay pinned to the bottom. No pop-ups.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<section class="band" aria-labelledby="fix-title">
+  <div class="inner">
+    <h2 id="fix-title">What&rsquo;s missing, and <em>what we fixed</em></h2>
+    <p class="sub">Everything on the left was checked on your live site on November 9, 2026.</p>
+
+    <div class="pairs">
+      <div class="head" aria-hidden="true"><p class="kicker" style="color: var(--sepia-ink)">Your site today</p><p class="kicker">In the preview</p></div>
+
+      <div class="row">
+        <div class="was"><p class="kicker lbl" style="color: var(--sepia-ink)">Your site today</p><h3>Your best work isn&rsquo;t on it</h3><p>The Park Royal ballroom repair, the cast ornament, your before-and-afters and your videos only live on Facebook. The site&rsquo;s gallery photos are small and there&rsquo;s no video.</p></div>
+        <div class="now"><p class="kicker lbl">In the preview</p><h3>Your best work leads</h3><p>The ballroom told in four photos, two before-and-after pairs, three job clips and about 30 of your own photos, each with a caption.</p>
+          <div class="strip"><img src="ballroom.jpg" width="640" height="640" alt="Restored Park Royal ballroom ceiling corner with cast plaster ornament over a sage dentil cornice"><img src="fireplace-before.jpg" width="400" height="400" alt="Living room wall around a fireplace with plaster fallen away"><img src="fireplace-after.jpg" width="400" height="400" alt="The same wall replastered smooth"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="was"><p class="kicker lbl" style="color: var(--sepia-ink)">Your site today</p><h3>No easy way to send a photo</h3><p>Plaster quotes start with a picture of the damage. The site only offers a contact form and a scheduling pop-up.</p></div>
+        <div class="now"><p class="kicker lbl">In the preview</p><h3>&ldquo;Match my wall&rdquo;</h3><p>Three taps (where it is, what happened, the closest finish) write the text for them. They attach a photo and send it to your number. Every finish swatch is cut from one of your jobs.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="was"><p class="kicker lbl" style="color: var(--sepia-ink)">Your site today</p><h3>Out of date</h3><p>It still says 5th generation. The home page says &ldquo;Since 2004,&rdquo; the About page says &ldquo;late 1980&rsquo;s.&rdquo; Google lists Monday 8&ndash;4; the site says 8&ndash;5.</p></div>
+        <div class="now"><p class="kicker lbl">In the preview</p><h3>Sixth generation, front and center</h3><p>&ldquo;Est. six generations ago.&rdquo; Dates, hours and service area wait for your OK, so nothing on the page is a guess.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="was"><p class="kicker lbl" style="color: var(--sepia-ink)">Your site today</p><h3>Two dead links send people away</h3><p>The website link on your Facebook page and the one on your BBB profile both go to old Google pages that now show &ldquo;404 Not Found.&rdquo;</p></div>
+        <div class="now"><p class="kicker lbl">At launch</p><h3>Every link points home</h3><p>We&rsquo;ll point Facebook, BBB and your Google Business Profile at the new site the day it goes live.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="was"><p class="kicker lbl" style="color: var(--sepia-ink)">Your site today</p><h3>Reviews nobody can check</h3><p>Testimonials show a first name and last initial, no date and no source. Your 4.4 Google rating isn&rsquo;t on the site.</p></div>
+        <div class="now"><p class="kicker lbl">In the preview</p><h3>Reviews with names and dates</h3><p>Quoted word for word with full name, date and where it was posted, plus your Google and BBB ratings with an &ldquo;as of&rdquo; date.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="was"><p class="kicker lbl" style="color: var(--sepia-ink)">Your site today</p><h3>Slow, and hard to use for some visitors</h3><p>Phones wait over 6 seconds for the main content. Automated tests find 70 accessibility errors across 7 pages: buttons and links with no label, photos with no description, low-contrast text. Those are the errors ADA demand-letter scanners look for.</p></div>
+        <div class="now"><p class="kicker lbl">In the preview</p><h3>Fast, and tested</h3><p>Main content in about 2 seconds. Zero automated accessibility errors, checked by keyboard, with an Accessibility page that tells people how to report a problem.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="was"><p class="kicker lbl" style="color: var(--sepia-ink)">Your site today</p><h3>Small things that cost trust</h3><p>&ldquo;EFIS&rdquo; (it&rsquo;s EIFS) on two pages. A &ldquo;100% satisfaction guarantee&rdquo; on the commercial page that promises more than the one-year workmanship promise on your BBB profile. The pop-up is a third-party tool that sets tracking cookies.</p></div>
+        <div class="now"><p class="kicker lbl">In the preview</p><h3>Promises you can stand behind</h3><p>Spelled right. Only claims you can back up, and anything we couldn&rsquo;t verify is marked for you to confirm. No pop-ups, no tracking pixels.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="num-title">
+  <div class="inner">
+    <h2 id="num-title">The numbers</h2>
+    <p class="sub">Same tests, same day, on a simulated mid-range phone.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th scope="col">Measure</th><th scope="col">Your site today</th><th scope="col">The preview</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Speed score (out of 100)</th><td class="old">67–75</td><td class="new">95–98</td></tr>
+          <tr><th scope="row">Time until the main content shows</th><td class="old">6.1–6.7 seconds</td><td class="new">1.8–2.2 seconds</td></tr>
+          <tr><th scope="row">Page size</th><td class="old">1.4 MB</td><td class="new">0.36 MB</td></tr>
+          <tr><th scope="row">Accessibility score (out of 100)</th><td class="old">85</td><td class="new">100</td></tr>
+          <tr><th scope="row">Automated accessibility errors</th><td class="old">70, on 7 pages</td><td class="new">0, on 4 pages</td></tr>
+          <tr><th scope="row">Best-practices score (out of 100)</th><td class="old">75</td><td class="new">100</td></tr>
+          <tr><th scope="row">Pop-ups when you arrive</th><td class="old">1</td><td class="new">0</td></tr>
+          <tr><th scope="row">Text us a photo</th><td class="old">No</td><td class="new">Yes, message pre-written</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Measured November 9, 2026 with Google Lighthouse (mobile setting, at least two runs each) and the axe-core accessibility checker. The preview is hidden from Google on purpose until you approve it, so search scores aren&rsquo;t compared.</p>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="get-title">
+  <div class="inner">
+    <h2 id="get-title">What <em>you get</em></h2>
+    <div class="get">
+      <div>
+        <h3>Built and live now</h3>
+        <ul>
+          <li>A homepage made from your own photos, clips and reviews</li>
+          <li>&ldquo;Match my wall&rdquo;: the text-a-photo tool for quotes</li>
+          <li>The Park Royal ballroom story</li>
+          <li>Six-generation family story</li>
+          <li>Before-and-afters and silent job clips with pause buttons</li>
+          <li>How a job goes, hours, payments and straight answers to first-call questions</li>
+          <li>Call and Text pinned to the bottom of every phone screen</li>
+          <li>Draft Privacy, Terms and Accessibility pages</li>
+        </ul>
+      </div>
+      <div>
+        <h3>In the full build</h3>
+        <ul>
+          <li>The homepage, finished with your confirmed details</li>
+          <li>Five service pages: plaster repair, ornamental plaster, stucco &amp; EIFS, tuckpointing &amp; masonry, commercial</li>
+          <li>Family history page and a Park Royal project page</li>
+          <li>Contact page with a real estimate form, spam protection and text-message consent done the way carriers require</li>
+          <li>Pages for the towns you serve</li>
+          <li>Final Privacy, Terms and Accessibility pages that match what the site does</li>
+          <li>Visitor counts with no cookies, ad pixels or session recording</li>
+          <li>Facebook, BBB and Google pointed at the new site</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="need-title">
+  <div class="inner">
+    <h2 id="need-title">What we need <em>from you</em></h2>
+    <p class="sub">Each of these shows on the preview as a small pencil note. Ten minutes on the phone covers most of them.</p>
+    <ul class="need">
+      <li>Your Google review count, and two or three Google reviews to feature</li>
+      <li>Your hours (the site and Google disagree)</li>
+      <li>The towns and neighborhoods you cover</li>
+      <li>License and insurance details</li>
+      <li>OK to show crew photos and to name the Park Royal</li>
+      <li>Who&rsquo;s in the old crew photo, and roughly when</li>
+      <li>That your number takes texts and photos</li>
+      <li>Full-size originals of your best photos (Facebook only shares crops)</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band close" aria-labelledby="next-title">
+  <div class="inner">
+    <h2 id="next-title">Next step: <em>a 15-minute walkthrough.</em></h2>
+    <p>Open <a href="https://clayton-plastering-preview.vercel.app" target="_blank" rel="noopener">clayton-plastering-preview.vercel.app</a> on your phone and try &ldquo;Match my wall.&rdquo; Then reply to Aaron&rsquo;s text and we&rsquo;ll walk through it at a job or over the phone, whichever is easier.</p>
+    <p class="fine">Prepared by Elward AI Dev LLC for Clayton Plastering &amp; Tuckpointing only. The preview is private, hidden from search engines, and will be taken down if you pass. Photos and clips are from your own website and Facebook page.</p>
+  </div>
+</section>
