@@ -33,12 +33,12 @@ export function CorniceRule({
             <stop offset="0" stopColor={c.cymaTop} />
             <stop offset="1" stopColor={c.cymaBot} />
           </linearGradient>
-          <pattern id={`dentil-${id}`} width="14" height="10" patternUnits="userSpaceOnUse">
+          <pattern id={`dentil-${id}`} y="15" width="14" height="10" patternUnits="userSpaceOnUse">
             <rect width="14" height="10" fill={c.gap} />
             <rect x="1" width="9" height="10" fill={c.dentil} />
             <rect x="1" width="9" height="2" fill={c.cymaTop} opacity="0.5" />
           </pattern>
-          <pattern id={`bead-${id}`} width="14" height="6" patternUnits="userSpaceOnUse">
+          <pattern id={`bead-${id}`} y="28" width="14" height="6" patternUnits="userSpaceOnUse">
             <circle cx="4" cy="3" r="2.6" fill={c.bead} />
             <rect x="9" y="2" width="4" height="2" rx="1" fill={c.bead} />
           </pattern>
