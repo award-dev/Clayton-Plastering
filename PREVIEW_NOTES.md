@@ -1,6 +1,8 @@
 # Clayton Plastering & Tuckpointing: preview notes
 
-Gathered 9 Nov 2026. Raw downloads are in the session scratchpad until "go". After that they get filtered into `src/assets/`.
+Gathered 9 Nov 2026. Direction A ("The Pattern Book") built the same day.
+
+**Preview handling:** share the link only with the owner. If they say no, or don't answer within 30 days (by **9 Dec 2026**), delete the Vercel deployment and the downloaded assets, and note the date here.
 
 ## Sources checked
 
@@ -10,7 +12,7 @@ Gathered 9 Nov 2026. Raw downloads are in the session scratchpad until "go". Aft
 | facebook.com/claytonplasteringandtuckpointing | Photos, reels, videos, reviews and contact tabs load without login. The main feed and single photo pages need a login. | 161 photos (square crops, 720–1536px), 9 videos, 3 dated recommendations, contact info, Feb 2025 ballroom post |
 | BBB.org profile | Loaded | Legal name, A+ rating, incorporation date, 1-year workmanship policy |
 | GuildQuality | Loaded, no review data shown | Old address only |
-| Google Business Profile | **Blocked** (Google returns "unusual traffic" to automated browsers) | Nothing. Need the GBP link, or a screenshot of rating, count and reviews. |
+| Google Business Profile (share.google link from Aaron) | Limited view only. Reviews and count need a sign-in. | 4.4 stars, "Plasterer", Monday hours 8 AM–4 PM. **Still need:** review count and 2–3 reviews (name + date). |
 | Instagram | None found | n/a |
 
 ## Facts (source)
@@ -71,3 +73,31 @@ What Clayton must not look like:
 - House numbers or plates: mailbox shows a "6", and the Kehrs Mill Rd truck photo may show a plate. Skip both. Street names in source filenames don't go in captions.
 - Stock: the current site has a GettyImages file. Dropped.
 - Logo: 220px raster, too small. Propose a text wordmark in their green.
+
+## Built: what's real vs placeholder
+
+Every `TODO(client)` in `src/data/` shows on the page as an "Owner to confirm" pencil note:
+
+- Google review count, and 2–3 Google reviews to feature (`reviews.ts`, `business.ts`)
+- Owner first name / who prospects ask for (`business.ts`)
+- Service area towns (`business.ts`)
+- Hours: the site says Mon–Sat 8–5; Google says Monday 8–4 (`business.ts`)
+- Street address: BBB and Facebook disagree; not shown (`business.ts`)
+- Founding year: 1970 vs late 1980s vs 2004; not shown, "Est. six generations ago" instead (`business.ts`)
+- License and insurance details (`business.ts`, `faq.ts`)
+- One-year workmanship promise wording, taken from BBB (`business.ts`)
+- That (314) 726-6359 accepts texts and photos ("Match my wall", call bar)
+- Who's in the old crew photo, and the year (hero, heritage)
+- Names and years for generations I–V (heritage)
+- Park Royal ballroom job details, and OK to name the building
+- Story of the raking-light / scored-stone hallway job
+- Privacy, Terms and Accessibility pages: drafts for owner review
+
+## QA (9 Nov 2026, local production build)
+
+- axe-core (WCAG 2.2 AA + best practice), 4 pages × 375px and 1280px: 0 violations, 0 needs review
+- Lighthouse mobile (3 runs): Performance 90–95, Accessibility 100, Best Practices 100, SEO 66 (only `is-crawlable` fails: that's the noindex, expected)
+- Keyboard: 42 tab stops at 1280px and 38 at 375px. All have a visible focus outline, none are hidden behind the sticky header or call bar, and all targets are 44px or more. "Match my wall" works fully by keyboard (arrow keys inside each group).
+- Reflow: no sideways scroll at 320px or at 200% zoom (640px)
+- Reduced motion: 0 running animations, videos stay paused
+- Not run: a VoiceOver pass (no macOS/iOS in this environment). A headings/landmarks outline was checked instead; do a 5-minute VoiceOver check on a phone before sending.
