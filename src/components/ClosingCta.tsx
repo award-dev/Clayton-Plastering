@@ -9,7 +9,7 @@ export function ClosingCta() {
       <CorniceRule tone="dark" />
       <div className="wrap py-16 text-left sm:py-24">
         <p className="kicker text-amber">Free estimates</p>
-        <h2 id="cta-title" className="mt-3 max-w-3xl text-5xl font-semibold text-lime sm:text-6xl lg:text-7xl">
+        <h2 id="cta-title" className="mt-3 max-w-3xl text-5xl font-semibold text-lime sm:text-6xl lg:text-[4rem]">
           Show us <em className="font-medium text-green-soft">the wall.</em>
         </h2>
         <p className="mt-5 max-w-xl text-[1.125rem] text-green-soft">

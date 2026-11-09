@@ -12,7 +12,7 @@ export function Heritage() {
       <div className="wrap grid items-center gap-10 lg:grid-cols-12">
         <div className="lg:col-span-5 lg:order-2">
           <p className="kicker text-sepia-ink">Six generations</p>
-          <h2 id="family-title" className="mt-3 text-4xl font-semibold sm:text-5xl lg:text-6xl">
+          <h2 id="family-title" className="mt-3 text-4xl font-semibold sm:text-5xl lg:text-[3.25rem]">
             The family <em className="font-medium text-sepia-ink">trade.</em>
           </h2>
           <div className="mt-5 space-y-4 text-[1.0625rem]">

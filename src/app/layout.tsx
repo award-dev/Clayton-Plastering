@@ -6,14 +6,17 @@ import { services } from "@/data/services";
 
 import "./globals.css";
 
-// Fonts are self-hosted (OFL, via Fontsource), instanced to the weights we use and subset to the characters on the site.
+// Fonts are self-hosted (OFL, via Fontsource), subset to the characters on the site.
 // Nothing is loaded from Google's servers. See CREDITS.md.
-const bodoni = localFont({
+// Display face: Libre Caslon Text. Caslon is the type of old builders' pattern books, and the Text cut
+// has sturdy strokes that stay readable from captions up to the hero.
+const caslon = localFont({
   src: [
-    { path: "../fonts/bodoni-moda-latin-opsz-normal.sub.woff2", style: "normal", weight: "500 700" },
-    { path: "../fonts/bodoni-moda-latin-opsz-italic.sub.woff2", style: "italic", weight: "500 700" },
+    { path: "../fonts/libre-caslon-text-latin-400-normal.sub.woff2", style: "normal", weight: "400" },
+    { path: "../fonts/libre-caslon-text-latin-700-normal.sub.woff2", style: "normal", weight: "700" },
+    { path: "../fonts/libre-caslon-text-latin-400-italic.sub.woff2", style: "italic", weight: "400" },
   ],
-  variable: "--font-bodoni",
+  variable: "--font-caslon",
   display: "swap",
   adjustFontFallback: "Times New Roman",
   fallback: ["Georgia", "serif"],
@@ -77,7 +80,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${bodoni.variable} ${instrument.variable}`}>
+    <html lang="en" className={`${caslon.variable} ${instrument.variable}`}>
       <body>
         <a
           href="#main"

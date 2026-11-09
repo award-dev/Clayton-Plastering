@@ -18,7 +18,7 @@ export function Hero() {
           <p className="kicker text-sage-ink">
             Plaster · Stucco · Tuckpointing <span className="text-muted">— St. Louis, MO</span>
           </p>
-          <h1 id="hero-title" className="mt-3 text-[2.625rem] sm:mt-4 font-semibold text-ink xs:text-[3.25rem] sm:text-6xl lg:text-[4.75rem]">
+          <h1 id="hero-title" className="mt-3 text-[2.625rem] sm:mt-4 font-semibold text-ink xs:text-[3.25rem] sm:text-6xl lg:text-[3.75rem] xl:text-[4.25rem]">
             Six generations of St.&nbsp;Louis <em className="font-medium text-green">plaster.</em>
           </h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-relaxed text-ink sm:mt-5 sm:text-[1.1875rem]">
@@ -52,9 +52,7 @@ export function Hero() {
             </li>
             <li>
               <a href={business.ratings.bbb.url} target="_blank" rel="noopener" className="group block">
-                <span className="block font-display text-2xl font-semibold text-ink">
-                  A<span className="font-sans font-bold">+</span>
-                </span>
+                <span className="block font-display text-2xl font-semibold text-ink">A+</span>
                 <span className="block leading-snug text-muted group-hover:underline">
                   BBB rating
                   <span className="sr-only"> (opens BBB.org in a new tab)</span>

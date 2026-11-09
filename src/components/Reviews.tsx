@@ -14,7 +14,7 @@ export function Reviews() {
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <p className="kicker text-sage-ink">In their words</p>
-            <h2 id="reviews-title" className="mt-3 text-4xl font-semibold sm:text-5xl lg:text-6xl">
+            <h2 id="reviews-title" className="mt-3 text-4xl font-semibold sm:text-5xl lg:text-[3.25rem]">
               What customers <em className="font-medium text-green">wrote.</em>
             </h2>
           </div>
@@ -33,10 +33,7 @@ export function Reviews() {
             </div>
             <div>
               <dt className="text-muted">BBB</dt>
-              <dd className="font-display text-2xl font-semibold">
-                {bbb.grade.replace("+", "")}
-                <span className="font-sans font-bold">+</span>
-              </dd>
+              <dd className="font-display text-2xl font-semibold">{bbb.grade}</dd>
               <dd className="text-[0.8125rem] text-muted">rating, as of {bbb.asOf}</dd>
             </div>
           </dl>

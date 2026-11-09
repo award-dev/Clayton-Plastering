@@ -27,7 +27,7 @@ export function HowItWorks() {
     <section id="how" aria-labelledby="how-title" className="py-16 sm:py-24">
       <div className="wrap">
         <p className="kicker text-sage-ink">How to hire us</p>
-        <h2 id="how-title" className="mt-3 text-4xl font-semibold sm:text-5xl lg:text-6xl">
+        <h2 id="how-title" className="mt-3 text-4xl font-semibold sm:text-5xl lg:text-[3.25rem]">
           How a job <em className="font-medium text-green">goes.</em>
         </h2>
 

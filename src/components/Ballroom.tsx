@@ -20,7 +20,7 @@ export function Ballroom() {
             <p className="kicker text-sage-ink">
               <span className="plate-no normal-case tracking-normal">Plate VII.</span> From the job book, February 2025
             </p>
-            <h2 id="ballroom-title" className="mt-3 text-4xl font-semibold sm:text-5xl lg:text-6xl">
+            <h2 id="ballroom-title" className="mt-3 text-4xl font-semibold sm:text-5xl lg:text-[3.25rem]">
               The Park Royal <em className="font-medium text-green">ballroom.</em>
             </h2>
           </div>

@@ -30,7 +30,7 @@ export function Services() {
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <p className="kicker text-sage-ink">The pattern book</p>
-            <h2 id="services-title" className="mt-3 text-4xl font-semibold sm:text-5xl lg:text-6xl">
+            <h2 id="services-title" className="mt-3 text-4xl font-semibold sm:text-5xl lg:text-[3.25rem]">
               What we patch, match <em className="font-medium text-green">and make.</em>
             </h2>
           </div>

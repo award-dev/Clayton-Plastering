@@ -11,7 +11,7 @@ Every photo and clip belongs to Clayton Plastering & Tuckpointing, LLC. They wer
 
 ## Fonts (self-hosted)
 
-- **Bodoni Moda** by indestructible type*, SIL Open Font License 1.1. Via Fontsource (`@fontsource-variable/bodoni-moda`). Instanced to weights 500–700 and subset to the characters the site uses.
+- **Libre Caslon Text** by Pablo Impallari and Rodrigo Fuenzalida, SIL Open Font License 1.1. Via Fontsource (`@fontsource/libre-caslon-text`). Regular, Bold and Italic, subset to the characters the site uses.
 - **Instrument Sans** by Rodrigo Fuenzalida and Jordan Egstad, SIL Open Font License 1.1. Via Fontsource (`@fontsource-variable/instrument-sans`). Subset to the characters the site uses.
 
 ## Code

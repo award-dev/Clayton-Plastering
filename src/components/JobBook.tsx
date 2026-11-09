@@ -12,7 +12,7 @@ export function JobBook() {
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <p className="kicker text-sage-ink">Real jobs, real ladders</p>
-            <h2 id="work-title" className="mt-3 text-4xl font-semibold sm:text-5xl lg:text-6xl">
+            <h2 id="work-title" className="mt-3 text-4xl font-semibold sm:text-5xl lg:text-[3.25rem]">
               From the <em className="font-medium text-green">job book.</em>
             </h2>
           </div>
@@ -42,7 +42,7 @@ export function JobBook() {
             <li key={p.source} className="break-inside-avoid">
               <figure className="plate">
                 <Image src={p.src} alt={p.alt} sizes="(min-width: 1024px) 22vw, 45vw" className="h-auto w-full" />
-                {p.caption && <figcaption className="plate-caption text-[0.8125rem]">{p.caption}</figcaption>}
+                {p.caption && <figcaption className="plate-caption text-[0.875rem]">{p.caption}</figcaption>}
               </figure>
             </li>
           ))}

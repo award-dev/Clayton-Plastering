@@ -33,7 +33,7 @@ export function RakingLight() {
             {[photos.tapedOut, photos.scoredWall].map((p) => (
               <figure key={p.source} className="plate">
                 <Image src={p.src} alt={p.alt} sizes="(min-width: 1024px) 18vw, 45vw" className="aspect-square h-auto w-full object-cover" />
-                <figcaption className="plate-caption text-[0.8125rem]">{p.caption}</figcaption>
+                <figcaption className="plate-caption text-[0.875rem]">{p.caption}</figcaption>
               </figure>
             ))}
           </div>

@@ -88,7 +88,7 @@ export function MatchMyWall() {
       <div className="wrap grid gap-12 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-7">
           <p className="kicker text-amber">Match my wall</p>
-          <h2 id="match-title" className="mt-3 text-4xl font-semibold text-lime sm:text-5xl lg:text-6xl">
+          <h2 id="match-title" className="mt-3 text-4xl font-semibold text-lime sm:text-5xl lg:text-[3.25rem]">
             Will the patch show? <em className="font-medium text-green-soft">Show us the wall.</em>
           </h2>
           <p className="mt-5 max-w-2xl text-[1.0625rem] text-green-soft">

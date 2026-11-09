@@ -20,7 +20,7 @@
   --color-amber: #e9c77b;
   --color-rule: #b9c4bb;
 
-  --font-display: var(--font-bodoni), "Bodoni 72", "Didot", Georgia, serif;
+  --font-display: var(--font-caslon), "Big Caslon", Georgia, serif;
   --font-sans: var(--font-instrument), "Helvetica Neue", Helvetica, sans-serif;
 
   --breakpoint-xs: 26rem;
@@ -52,9 +52,8 @@
   h2,
   h3 {
     font-family: var(--font-display);
-    font-optical-sizing: auto;
-    line-height: 1.04;
-    letter-spacing: -0.01em;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
     text-wrap: balance;
   }
   p {
@@ -104,7 +103,7 @@
       0 0 0 5px var(--color-rule);
   }
   .plate-caption {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     line-height: 1.45;
     color: var(--color-muted);
     padding: 0.625rem 0.25rem 0.125rem;
@@ -170,8 +169,7 @@
     align-items: baseline;
     gap: 0.375rem;
     font-size: 0.875rem;
-    font-style: italic;
-    line-height: 1.35;
+    line-height: 1.4;
     color: var(--color-sepia-ink);
     background: var(--color-plaster);
     border: 1px dashed var(--color-sepia);
@@ -179,8 +177,7 @@
     transform: rotate(-0.6deg);
   }
   .confirm strong {
-    font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.02em;
   }
 
